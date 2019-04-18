@@ -12,20 +12,19 @@ export class OrderItem extends Component {
   };
 
   render() {
-    const { id, title, price, totalPrice } = this.props.order;
+    const { id, title, price } = this.props.order;
     return (
       <div>
         <div style={this.getStyle()}>
           <input
             type="checkbox"
             onChange={this.props.markComplete.bind(this, id)}
-            onClick={this.props.showPrice.bind(this, price, totalPrice)}
+            onClick={this.props.showPrice.bind(this, price)}
           />{" "}
           {title}
           <button onClick={this.props.delOrder.bind(this, id)} style={btnStyle}>
             Remove
           </button>
-          <p />
         </div>
       </div>
     );

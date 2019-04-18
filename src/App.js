@@ -12,72 +12,71 @@ class App extends Component {
         id: uuid.v4(),
         title: "Small Pasta",
         price: 5,
-        completed: false,
-        totalPrice: 0
+        completed: false
       },
       {
         id: uuid.v4(),
         title: "Medium Pasta",
         price: 7.5,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        // totalPrice: 0
       },
       {
         id: uuid.v4(),
         title: "Large Pasta",
         price: 10,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        //totalPrice: 0
       },
 
       {
         id: uuid.v4(),
         title: "Tomato Sauce",
         price: 1,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        // totalPrice: 0
       },
       {
         id: uuid.v4(),
         title: "Mushroom Sauce",
         price: 1.5,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        // totalPrice: 0
       },
       {
         id: uuid.v4(),
         title: "Pesto Sauce",
         price: 1.5,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        //totalPrice: 0
       },
 
       {
         id: uuid.v4(),
         title: "Fish",
         price: 1.5,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        //totalPrice: 0
       },
       {
         id: uuid.v4(),
         title: "Meat",
         price: 1.5,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        //totalPrice: 0
       },
       {
         id: uuid.v4(),
         title: "Vegetables",
         price: 1,
-        completed: false,
-        totalPrice: 0
+        completed: false
+        //totalPrice: 0
       }
     ]
   };
 
   handleClick() {
-    console.log("Your total orders is ");
+    console.log("Order confirmed!");
   }
 
   //Toggle checkbox
@@ -114,9 +113,6 @@ class App extends Component {
     console.log(price);
   };
 
-  showTotalPrice = totalPrice => {
-    console.log(totalPrice);
-  };
   render() {
     return (
       <div className="App">
@@ -128,12 +124,9 @@ class App extends Component {
             markComplete={this.markComplete}
             showPrice={this.showPrice}
             delOrder={this.delOrder}
-            showTotalPrice={this.showTotalPrice}
           />
         </div>
-        <button className="orderBtn " onClick={this.handleClick}>
-          Place Order!
-        </button>
+        <button onClick={this.handleClick}>Order</button>
       </div>
     );
   }
